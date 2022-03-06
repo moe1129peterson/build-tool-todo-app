@@ -1,0 +1,29 @@
+
+body{
+    background: center;
+
+}
+
+#todos{
+
+    width: 600px;
+    padding: 20px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.completeTodo{
+    padding: 50px;
+}
+
+.cross{
+    text-decoration: line-through;
+    transition: 0ms;
+
+}
+
+.fall{
+    opacity: 0 ;
+    transform: translateY(30px);
+    transition: 0ms;
+}
