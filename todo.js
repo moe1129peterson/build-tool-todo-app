@@ -1,36 +1,36 @@
-var todoContainer = document.getElementById('todos')
-var enterTodo = document.querySelector('.todo'); 
-var addTodoButton = document.querySelector('.addTodo')
-var removeTodoButton = document.querySelector('.removeTodo')
+const todoContainer = document.getElementById('todos')
+const enterTodo = document.querySelector('.todo'); 
+const addTodoButton = document.querySelector('.addTodo')
+const removeTodoButton = document.querySelector('.removeTodo')
 
 addTodoButton.addEventListener('click', function(e){
     
     if(enterTodo.value.trim ()){
     
-        var ulTag = document.createElement('ul')
+        const ulTag = document.createElement('ul')
         ulTag.classList.add('todo-card')
         
-        var todoList = document.createElement('div')
+        const todoList = document.createElement('div')
         todoList.classList.add('todo-list')
         
-        var liTag = document.createElement('li')
+        const liTag = document.createElement('li')
         liTag.innerHTML = enterTodo.value
         liTag.classList.add('todo-item')
         
-        var buttonDiv = document.createElement('div')
+        const buttonDiv = document.createElement('div')
         buttonDiv.classList.add('button')
 
-        var completeButton = document.createElement('button')
+        const completeButton = document.createElement('button')
         completeButton.classList.add('complete')
-        completeButton.innerHTML = '<i class="completeTodo">Complete</i>'
+        completeButton.innerHTML = '<i class="completeTodo" aria-hidden="true">Complete</i>'
         
-        var editButton = document.createElement('button')
+        const editButton = document.createElement('button')
         editButton.classList.add('edit')
-        editButton.innerHTML = '<i class="editTodo">Edit</i>'
+        editButton.innerHTML = '<i class="editTodo" aria-hidden="true">Edit</i>'
         
-        var deleteButton = document.createElement('button')
+        const deleteButton = document.createElement('button')
         deleteButton.classList.add('delete')
-        deleteButton.innerHTML = '<i class="deleteTodo">Delete</i>'
+        deleteButton.innerHTML = '<i class="deleteTodo" aria-hidden="true">Delete</i>'
         
         ulTag.appendChild(todoList)
         todoList.appendChild(liTag)
@@ -41,18 +41,24 @@ addTodoButton.addEventListener('click', function(e){
 
         todoContainer.appendChild(ulTag)
 
+        // function deleteTodo(){
+        //     const deleteTodoFunction = document.getElementById('todo-item')
+        //     deleteTodoFunction.remove
+        // }
+
+
         todoList.addEventListener('click', function(e){
-            var items = e.target;
+            const items = e.target;
             
             if(items.classList[0] === 'complete'){
-                var todo = items.parentElement
-                var todo_2 = todo.parentElement
-                todo_2.classList.add('cross') 
+                const todo_list = items.parentElement
+                const todo2 = todo_list.parentElement
+                todo2.classList.add('line_through') 
             }
             else if(items.classList[0] === 'delete'){
-                var todo = items.parentElement
-                var todo_2 = todo.parentElement
-                todo_2.classList.add('fall') 
+                const todo_list = items.parentElement
+                const todo2 = todo_list.parentElement
+                todo2.classList.add('fall') 
             }
 
         })
