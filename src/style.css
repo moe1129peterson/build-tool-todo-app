@@ -1,9 +1,17 @@
 
 body{
     background: center;
-
+    
 }
 
+.app-background {
+    height: 50vh;
+    background-color: #CDCDCD;
+}
+
+.heading {
+    text-align: center;
+}
 
 .line_through{
     text-decoration: line-through;
@@ -12,7 +20,11 @@ body{
 
 }
 
-.fall{
+.delete {
+    /* background-color: red; */
+}
+
+.fall {
     opacity: 0 ;
     transform: translateY(30px);
     transition: 0ms;
@@ -23,7 +35,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
 .completeTodo{

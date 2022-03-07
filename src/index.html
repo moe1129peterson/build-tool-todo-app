@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo app with BuildTool</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container app-background d-flex justify-content-center">
+        <div id="todos">
+            <div class="heading">
+                <h1>Add to do list</h1>
+                <div class="d-flex justify-content-center">
+                    <img src="/src/todo-check.png" alt="Check mark">
+                </div>
+            </div>
+            <div class="todo-card">
+                <input type="text" class="todo" placeholder="Add task...">
+                <button class="addTodo btn btn-success">Add</button>
+                <button class="removeTodo btn btn-danger">Remove</button>  
+            </div>
+         
+        </div>
+    </div>
+    <script src="bundle.js"></script>
+    
+</body>
+</html>
