@@ -5,6 +5,8 @@ import Check from './todo-check.jpg';
 const myCheck = new Image();
 myCheck.src = Check;
 
+document.getElementById('icon').appendChild(myCheck);
+
 const todoContainer = document.getElementById('todos')
 const enterTodo = document.querySelector('.todo'); 
 const addTodoButton = document.querySelector('.addTodo')
