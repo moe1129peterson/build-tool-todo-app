@@ -1,9 +1,3 @@
-import _ from 'lodash';
-import './style.css';
-import Check from './todo-check.jpg';
-
-const myCheck = new Image();
-myCheck.src = Check;
 
 const todoContainer = document.getElementById('todos')
 const enterTodo = document.querySelector('.todo'); 
