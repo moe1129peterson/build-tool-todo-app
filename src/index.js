@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import './style.css';
-import Check from './todo-check.png';
+import Check from './todo-check.jpg';
 
 const myCheck = new Image();
 myCheck.src = Check;
