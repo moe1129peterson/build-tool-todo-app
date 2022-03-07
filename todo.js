@@ -27,6 +27,9 @@ addTodoButton.addEventListener('click', function(e){
         const editButton = document.createElement('button')
         editButton.classList.add('edit')
         editButton.innerHTML = '<i class="editTodo" aria-hidden="true">Edit</i>'
+        editButton.onclick = function(){
+            editTodo(liTag)
+        }
         
         const deleteButton = document.createElement('button')
         deleteButton.classList.add('delete')
@@ -60,14 +63,19 @@ addTodoButton.addEventListener('click', function(e){
                 const todo2 = todo_list.parentElement
                 todo2.classList.add('fall') 
             }
+            
 
         })
 
         enterTodo.value = ''
 
-    
-
-
+    }
+    else if(items.value === ''){
+        alert ('Please enter new todo')
     }
 
 })
+function editTodo(e){
+    const editedTodo = prompt('Edit this todo', e.firstChild.nodeValue)
+    e.firstChild.nodeValue = editedTodo
+}

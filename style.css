@@ -17,3 +17,27 @@ body{
     transform: translateY(30px);
     transition: 0ms;
 }
+
+#todos > .todo-card .todo-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.completeTodo{
+    padding: 10 10 10 10 px;
+    padding: 1rem;
+}
+
+button.complete {
+
+    padding: 5 5 5 5rem;
+
+}
+
+#todos > .todo-card{
+    list-style: none;
+    margin: 10px 0 0;
+}
